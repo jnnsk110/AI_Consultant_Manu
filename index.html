@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-plum: #f472b6;
+            --accent-bamboo: #4ade80;
+            --accent-pine: #facc15;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(74, 222, 128, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.15) 0%, transparent 40%);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.05em;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Tier Indicators */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+        }
+
+        .card.plum::before {
+            background: linear-gradient(to bottom, var(--accent-plum), transparent);
+        }
+
+        .card.bamboo::before {
+            background: linear-gradient(to bottom, var(--accent-bamboo), transparent);
+        }
+
+        .card.pine::before {
+            background: linear-gradient(to bottom, var(--accent-pine), transparent);
+        }
+
+        .tier-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plum .tier-name {
+            color: var(--accent-plum);
+        }
+
+        .bamboo .tier-name {
+            color: var(--accent-bamboo);
+        }
+
+        .pine .tier-name {
+            color: var(--accent-pine);
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #fff;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .service-list {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .service-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+        }
+
+        .goal {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--glass-border);
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 0.8em;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Business Partner</h1>
+            <div class="subtitle">Personalized Consulting Service</div>
+        </header>
+
+        <!-- Plum (Basic) -->
+        <div class="card plum">
+            <div class="tier-name">🌸 Basic (Entry)</div>
+            <div class="tagline"><b>"講義"ではなく"共同作業"。</b><br>その場で仕事を終わらせましょう。</div>
+            <div class="price">¥20,000 <span style="font-size: 0.8em">/ 90分</span></div>
+            <ul class="service-list">
+                <li><strong>マンツーマン・セッション</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">今のプレゼン資料・書類をその場で完成</span></li>
+                <li><strong>AI操作レクチャー</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">作りながら覚える「実践形式」</span></li>
+            </ul>
+            <div class="goal">Goal: 「90分で"今の仕事"が片付いた！」</div>
+        </div>
+
+        <!-- Bamboo (Partner) -->
+        <div class="card bamboo">
+            <span class="badge">おすすめ</span>
+            <div class="tier-name">🎍 Partner (Standard)</div>
+            <div class="tagline"><b>"習ったけど現場で止まる"を防ぐ。</b><br>最強の定着保証プラン。</div>
+            <div class="price">¥50,000 <span>/ 月</span></div>
+            <ul class="service-list">
+                <li><strong>月1回の訪問 (2時間)</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">直接質問・環境設定・課題解決</span></li>
+                <li><strong>チャット相談 & 制作代行 (月1件)</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">「これ作っといて」もOK</span></li>
+            </ul>
+            <div class="goal">Goal: あなたが「つまずく時間」をゼロにする</div>
+        </div>
+
+        <!-- Pine (Premium) -->
+        <div class="card pine">
+            <div class="tier-name">🌲 Premium (Biz)</div>
+            <div class="tagline"><b>組織ごと変える。</b><br>社員全員のAI化とシステム開発。</div>
+            <div class="price">要見積り <span>(Custom)</span></div>
+            <ul class="service-list">
+                <li><strong>全社研修・システム開発</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">社内フローの刷新・専用ツール開発</span></li>
+                <li><strong>経営実装パートナリング</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">経営課題を技術で解決</span></li>
+            </ul>
+            <div class="goal">Goal: 社長の手を煩わせず「組織」を変える</div>
+        </div>
+
+        <footer>
+            &copy; 2025 AI Business Partner Service
+        </footer>
+    </div>
+</body>
+
+</html>
