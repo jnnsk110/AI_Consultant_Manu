@@ -57,6 +57,16 @@
             margin-top: 5px;
         }
 
+        h2 {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
         .card {
             background: var(--card-bg);
             backdrop-filter: blur(12px);
@@ -136,6 +146,13 @@
             font-size: 1rem;
             font-weight: 400;
             color: var(--text-muted);
+        }
+
+        .price .intro-price {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-plum);
+            font-weight: normal;
         }
 
         .service-list {
@@ -227,47 +244,80 @@
             <div class="subtitle">Personalized Consulting Service</div>
         </header>
 
-        <!-- Plum (Basic) -->
+        <!-- Section: Individual -->
+        <h2>【個人・個人事業主・フリーランスの方】</h2>
+
+        <!-- Plum (Spot) -->
         <div class="card plum">
-            <div class="tier-name">🌸 Basic (Entry)</div>
+            <div class="tier-name">🌸 梅 (Spot)</div>
             <div class="tagline"><b>"講義"ではなく"共同作業"。</b><br>その場で仕事を終わらせましょう。</div>
-            <div class="price">¥20,000 <span style="font-size: 0.8em">/ 90分</span></div>
+            <div class="price">¥20,000 <span style="font-size: 0.8em">/ 90分</span>
+                <span class="intro-price">※初回お試し: ¥10,000</span>
+            </div>
             <ul class="service-list">
                 <li><strong>マンツーマン・セッション</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">今のプレゼン資料・書類をその場で完成</span></li>
-                <li><strong>AI操作レクチャー</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">作りながら覚える「実践形式」</span></li>
+                        style="color:var(--text-muted); font-size:0.85em">今の作成・設定作業をその場で解決</span></li>
+                <li><strong>スマホでAI体験</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">声だけで仕事が進む魔法を体験</span></li>
             </ul>
-            <div class="goal">Goal: 「90分で"今の仕事"が片付いた！」</div>
+            <div class="goal">Goal: 「90分で"今の困りごと"が片付いた！」</div>
         </div>
 
-        <!-- Bamboo (Partner) -->
+        <!-- Bamboo (Basic) -->
+        <div class="card bamboo">
+            <div class="tier-name">🎍 竹 (Basic)</div>
+            <div class="tagline"><b>あなたの「デジタル右腕」になります。</b><br>月額制の安心サポート。</div>
+            <div class="price">¥50,000 <span style="font-size: 0.8em">/ 月</span></div>
+            <ul class="service-list">
+                <li><strong>月2回の訪問/オンライン (90分)</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">定期的なレクチャー・相談</span></li>
+                <li><strong>チャット相談</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">困ったときにいつでも質問OK</span></li>
+            </ul>
+            <div class="goal">Goal: 面倒な作業をAIに丸投げできる</div>
+        </div>
+
+        <!-- Section: Corporate -->
+        <h2>【法人・組織をお持ちの経営者様】</h2>
+
+        <!-- Plum (Training) -->
+        <div class="card plum">
+            <div class="tier-name">🌸 梅 (Training)</div>
+            <div class="tagline"><b>社内研修・導入支援。</b><br>社員全員でAIを使う第一歩。</div>
+            <div class="price">¥30,000 <span style="font-size: 0.8em">/ 120分</span></div>
+            <ul class="service-list">
+                <li><strong>社内向けAI体験研修</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">社員様の目線に合わせたやさしい導入</span></li>
+                <li><strong>セキュリティ・ルール策定</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">安全に使うための環境構築</span></li>
+            </ul>
+            <div class="goal">Goal: 社員が「AIって便利だ」と気づく</div>
+        </div>
+
+        <!-- Bamboo (Advisor) -->
         <div class="card bamboo">
             <span class="badge">おすすめ</span>
-            <div class="tier-name">🎍 Partner (Standard)</div>
-            <div class="tagline"><b>"習ったけど現場で止まる"を防ぐ。</b><br>最強の定着保証プラン。</div>
-            <div class="price">¥50,000 <span>/ 月</span></div>
+            <div class="tier-name">🎍 竹 (Advisor)</div>
+            <div class="tagline"><b>顧問パートナー。</b><br>業務への定着と成果を保証。</div>
+            <div class="price">¥100,000 <span style="font-size: 0.8em">/ 月</span></div>
             <ul class="service-list">
-                <li><strong>月1回の訪問 (2時間)</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">直接質問・環境設定・課題解決</span></li>
-                <li><strong>チャット相談 & 制作代行 (月1件)</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">「これ作っといて」もOK</span></li>
+                <li><strong>月2回の訪問コンサル (120分)</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">実務への組み込み・自動化支援</span></li>
+                <li><strong>プロンプト作成代行</strong><br><span
+                        style="color:var(--text-muted); font-size:0.85em">御社専用の「指示書」を作成</span></li>
             </ul>
-            <div class="goal">Goal: あなたが「つまずく時間」をゼロにする</div>
+            <div class="goal">Goal: 組織全体の生産性を向上させる</div>
         </div>
 
         <!-- Pine (Premium) -->
         <div class="card pine">
-            <div class="tier-name">🌲 Premium (Biz)</div>
-            <div class="tagline"><b>組織ごと変える。</b><br>社員全員のAI化とシステム開発。</div>
-            <div class="price">要見積り <span>(Custom)</span></div>
+            <div class="tier-name">🌲 Premium (Partner)</div>
+            <div class="tagline"><b>事業開発・変革。</b><br>AIを使った新規事業やツール開発。</div>
+            <div class="price">¥200,000〜 <span style="font-size: 0.8em">/ 月</span></div>
             <ul class="service-list">
-                <li><strong>全社研修・システム開発</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">社内フローの刷新・専用ツール開発</span></li>
-                <li><strong>経営実装パートナリング</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">経営課題を技術で解決</span></li>
+                <li><strong>専用AIツール・Chatbot開発</strong></li>
+                <li><strong>新規事業（出版等）立ち上げ支援</strong></li>
             </ul>
-            <div class="goal">Goal: 社長の手を煩わせず「組織」を変える</div>
         </div>
 
         <footer>
