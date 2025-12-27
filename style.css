@@ -428,6 +428,15 @@ section {
     color: var(--text-main);
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Remove checkmark for specified list items */
+.plan-features li.no-check {
+    background-image: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 20px;
 }
