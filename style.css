@@ -97,6 +97,7 @@ nav a:hover {
     cursor: pointer;
     z-index: 1002;
     padding: 10px;
+    position: relative;
 }
 
 .menu-btn span {
@@ -110,14 +111,17 @@ nav a:hover {
 }
 
 #menu-toggle {
-    display: none;
-    /* Always hidden checkbox */
+    display: none !important;
+    /* Always hidden checkbox force */
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .menu-btn {
-        display: block;
+        display: block !important;
     }
 
     /* Change burger to X when checked */
