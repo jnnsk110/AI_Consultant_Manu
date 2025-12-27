@@ -219,22 +219,23 @@ nav a:hover {
 }
 
 .hero-impact {
-    display: inline-block;
-    background: white;
-    padding: 10px 20px;
-    border-left: 5px solid #e53e3e;
+    display: table !important;
+    /* Force block behavior but fit content */
+    background: white !important;
+    padding: 10px 20px !important;
+    border-left: 5px solid #e53e3e !important;
     /* Accent Red */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
     /* Soft Shadow */
-    border-radius: 4px;
-    font-weight: bold;
-    color: #2d3748;
-    margin-bottom: 25px;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    color: #2d3748 !important;
+    margin-bottom: 25px !important;
     /* Space between impact and title */
-    margin-top: 15px;
+    margin-top: 15px !important;
     /* Space between badge and impact */
-    font-size: 1.1rem;
-    position: relative;
+    font-size: 1.1rem !important;
+    position: relative !important;
     /* Optional: Subtle entrance animation */
     animation: fadeInSlide 0.8s ease-out forwards;
 }
