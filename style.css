@@ -415,3 +415,61 @@ footer {
         margin: 0 auto;
     }
 }
+
+/* --- Values Section (Service Pillars) --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.value-item {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-item h3 {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    line-height: 1.5;
+}
+
+.value-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.value-item li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+}
+
+.value-item li::before {
+    content: "・";
+    color: var(--brand-navy);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
