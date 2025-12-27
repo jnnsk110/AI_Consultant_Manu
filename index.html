@@ -4,326 +4,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Consulting Menu</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+    <title>アナログ世代の「AI右腕」 | ネモトジュンノスケ</title>
+    <meta name="description" content="キーボードは苦手でも大丈夫。あなたの「声」をAIが形にします。アナログ世代専門のAI活用パートナー。">
+    <!-- Google Fonts: 親しみやすく読みやすいフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+        rel="stylesheet">
 
+    <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-plum: #f472b6;
-            --accent-bamboo: #4ade80;
-            --accent-pine: #facc15;
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --primary: #2d3748;
+            /* Dark Gray text */
+            --accent: #e53e3e;
+            /* Warm Red for emphasis */
+            --bg-light: #f7fafc;
+            /* Very light gray bg */
+            --white: #ffffff;
+            --plum: #d53f8c;
+            /* Pink for Ume */
+            --bamboo: #38a169;
+            /* Green for Take */
+            --pine: #d69e2e;
+            /* Gold for Matsu */
+            --line-green: #06c755;
+            /* LINE App Color */
         }
 
         body {
             font-family: 'Zen Kaku Gothic New', sans-serif;
-            background-color: var(--bg-color);
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(74, 222, 128, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.15) 0%, transparent 40%);
-            color: var(--text-color);
+            background-color: var(--bg-light);
+            color: var(--primary);
+            line-height: 1.8;
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            /* Round friendly font */
         }
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
         }
 
-        header {
+        /* --- Hero Section --- */
+        .hero {
+            background-color: var(--white);
+            padding: 60px 20px;
             text-align: center;
-            margin-bottom: 40px;
-            padding-top: 20px;
+            border-bottom: 5px solid var(--bamboo);
         }
 
-        h1 {
+        .hero h1 {
             font-size: 1.8rem;
-            margin: 0;
-            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 5px;
-        }
-
-        h2 {
+        .hero .catch {
             font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-top: 40px;
-            margin-bottom: 20px;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* --- Concept Section --- */
+        .section {
+            padding: 50px 20px;
+            background: var(--white);
+            margin: 20px auto;
+            border-radius: 12px;
+            max-width: 760px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
             text-align: center;
-            border-bottom: 1px solid var(--glass-border);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
             padding-bottom: 10px;
         }
 
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            overflow: hidden;
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--bamboo);
+            margin: 10px auto 0;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        .concept-text {
+            text-align: center;
+            font-size: 1.05rem;
         }
 
-        /* Tier Indicators */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 6px;
-            height: 100%;
-        }
-
-        .card.plum::before {
-            background: linear-gradient(to bottom, var(--accent-plum), transparent);
-        }
-
-        .card.bamboo::before {
-            background: linear-gradient(to bottom, var(--accent-bamboo), transparent);
-        }
-
-        .card.pine::before {
-            background: linear-gradient(to bottom, var(--accent-pine), transparent);
-        }
-
-        .tier-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .plum .tier-name {
-            color: var(--accent-plum);
-        }
-
-        .bamboo .tier-name {
-            color: var(--accent-bamboo);
-        }
-
-        .pine .tier-name {
-            color: var(--accent-pine);
-        }
-
-        .tagline {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
+        .highlight {
+            background: linear-gradient(transparent 60%, #fff799 60%);
             font-weight: bold;
         }
 
+        /* --- Profile Section --- */
+        .profile-box {
+            background: #f0fff4;
+            /* Light Green tint */
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .profile-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-role {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* --- Pricing Section --- */
+        .pricing-group {
+            margin-bottom: 50px;
+        }
+
+        .pricing-group h3 {
+            text-align: center;
+            background: #edf2f7;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            border: 2px solid #eee;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            background: var(--white);
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            /* Gentle hover lift */
+        }
+
+        .card.plum {
+            border-top: 5px solid var(--plum);
+        }
+
+        .card.bamboo {
+            border-top: 5px solid var(--bamboo);
+        }
+
+        .card.pine {
+            border-top: 5px solid var(--pine);
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .plan-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+
+        .plum .plan-name {
+            color: var(--plum);
+        }
+
+        .bamboo .plan-name {
+            color: var(--bamboo);
+        }
+
+        .pine .plan-name {
+            color: var(--pine);
+        }
+
+        .plan-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 10px;
+        }
+
         .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 15px 0;
-            color: #fff;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
         }
 
         .price span {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-muted);
-        }
-
-        .price .intro-price {
-            display: block;
             font-size: 0.9rem;
-            color: var(--accent-plum);
             font-weight: normal;
+            color: #718096;
         }
 
-        .service-list {
-            margin: 15px 0;
-            padding-left: 0;
+        .intro-price {
+            display: inline-block;
+            background: var(--plum);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        ul.features {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .service-list li {
-            margin-bottom: 10px;
-            padding-left: 20px;
+        ul.features li {
+            margin-bottom: 8px;
+            padding-left: 25px;
             position: relative;
             font-size: 0.95rem;
         }
 
-        .service-list li::before {
-            content: '✓';
+        ul.features li::before {
+            content: "✔";
             position: absolute;
             left: 0;
-            color: var(--text-muted);
-        }
-
-        .goal {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--glass-border);
-            font-size: 0.9rem;
-            color: #e2e8f0;
-            font-style: italic;
-            text-align: center;
+            color: var(--bamboo);
+            font-weight: bold;
         }
 
         .badge {
             position: absolute;
-            top: 20px;
+            top: -12px;
             right: 20px;
-            background: rgba(74, 222, 128, 0.2);
-            color: #4ade80;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            font-size: 0.75rem;
+            background: var(--bamboo);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
-            border: 1px solid rgba(74, 222, 128, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- CTA Section --- */
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            margin-top: 40px;
+        }
+
+        .btn-line {
+            display: block;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: var(--line-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
+            transition: opacity 0.2s;
+        }
+
+        .btn-line:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 0.8em;
+            font-size: 0.8rem;
+            color: #888;
+            padding: 40px 0;
         }
 
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.5rem;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .price {
+                font-size: 1.4rem;
             }
-        }
-
-        .card {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        .card:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-
-        .card:nth-child(3) {
-            animation-delay: 0.2s;
-        }
-
-        .card:nth-child(4) {
-            animation-delay: 0.3s;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>AI Business Partner</h1>
-            <div class="subtitle">Personalized Consulting Service</div>
-        </header>
 
-        <!-- Section: Individual -->
-        <h2>【個人・個人事業主・フリーランスの方】</h2>
-
-        <!-- Plum (Spot) -->
-        <div class="card plum">
-            <div class="tier-name">🌸 梅 (Spot)</div>
-            <div class="tagline"><b>"講義"ではなく"共同作業"。</b><br>その場で仕事を終わらせましょう。</div>
-            <div class="price">¥20,000 <span style="font-size: 0.8em">/ 90分</span>
-                <span class="intro-price">※初回お試し: ¥10,000</span>
-            </div>
-            <ul class="service-list">
-                <li><strong>マンツーマン・セッション</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">今の作成・設定作業をその場で解決</span></li>
-                <li><strong>スマホでAI体験</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">声だけで仕事が進む魔法を体験</span></li>
-            </ul>
-            <div class="goal">Goal: 「90分で"今の困りごと"が片付いた！」</div>
-        </div>
-
-        <!-- Bamboo (Basic) -->
-        <div class="card bamboo">
-            <div class="tier-name">🎍 竹 (Basic)</div>
-            <div class="tagline"><b>あなたの「デジタル右腕」になります。</b><br>月額制の安心サポート。</div>
-            <div class="price">¥50,000 <span style="font-size: 0.8em">/ 月</span></div>
-            <ul class="service-list">
-                <li><strong>月2回の訪問/オンライン (90分)</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">定期的なレクチャー・相談</span></li>
-                <li><strong>チャット相談</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">困ったときにいつでも質問OK</span></li>
-            </ul>
-            <div class="goal">Goal: 面倒な作業をAIに丸投げできる</div>
-        </div>
-
-        <!-- Section: Corporate -->
-        <h2>【法人・組織をお持ちの経営者様】</h2>
-
-        <!-- Plum (Training) -->
-        <div class="card plum">
-            <div class="tier-name">🌸 梅 (Training)</div>
-            <div class="tagline"><b>社内研修・導入支援。</b><br>社員全員でAIを使う第一歩。</div>
-            <div class="price">¥30,000 <span style="font-size: 0.8em">/ 120分</span></div>
-            <ul class="service-list">
-                <li><strong>社内向けAI体験研修</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">社員様の目線に合わせたやさしい導入</span></li>
-                <li><strong>セキュリティ・ルール策定</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">安全に使うための環境構築</span></li>
-            </ul>
-            <div class="goal">Goal: 社員が「AIって便利だ」と気づく</div>
-        </div>
-
-        <!-- Bamboo (Advisor) -->
-        <div class="card bamboo">
-            <span class="badge">おすすめ</span>
-            <div class="tier-name">🎍 竹 (Advisor)</div>
-            <div class="tagline"><b>顧問パートナー。</b><br>業務への定着と成果を保証。</div>
-            <div class="price">¥100,000 <span style="font-size: 0.8em">/ 月</span></div>
-            <ul class="service-list">
-                <li><strong>月2回の訪問コンサル (120分)</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">実務への組み込み・自動化支援</span></li>
-                <li><strong>プロンプト作成代行</strong><br><span
-                        style="color:var(--text-muted); font-size:0.85em">御社専用の「指示書」を作成</span></li>
-            </ul>
-            <div class="goal">Goal: 組織全体の生産性を向上させる</div>
-        </div>
-
-        <!-- Pine (Premium) -->
-        <div class="card pine">
-            <div class="tier-name">🌲 Premium (Partner)</div>
-            <div class="tagline"><b>事業開発・変革。</b><br>AIを使った新規事業やツール開発。</div>
-            <div class="price">¥200,000〜 <span style="font-size: 0.8em">/ 月</span></div>
-            <ul class="service-list">
-                <li><strong>専用AIツール・Chatbot開発</strong></li>
-                <li><strong>新規事業（出版等）立ち上げ支援</strong></li>
-            </ul>
-        </div>
-
-        <footer>
-            &copy; 2025 AI Business Partner Service
-        </footer>
+    <!-- Hero Area -->
+    <div class="hero">
+        <div class="hero-badge">アナログ世代専門 AIパートナー</div>
+        <h1>「面倒な入力」はAIにお任せ。<br>あなたは「確認」するだけ。</h1>
+        <p class="catch">キーボードが苦手でも大丈夫。<br>あなたの「声」だけで、仕事が進む魔法を。</p>
     </div>
+
+    <div class="container">
+
+        <!-- Concept -->
+        <div class="section">
+            <h2 class="section-title">こんなお悩みありませんか？</h2>
+            <div class="concept-text">
+                <p>「AIがすごいのは分かるけど、使い方が難しい...」<br>
+                    「キーボードを打つのが遅くて、資料作成が進まない...」</p>
+                <br>
+                <p>安心してください。<br>
+                    専門用語は一切使いません。<br><br>
+                    <span class="highlight">スマホに向かって「これをやりたい」と話すだけ。</span><br>
+                    面倒な下書きや設定は、すべてAI（と私）が代行します。
+                </p>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="section profile-box">
+            <h2 class="section-title">私が担当します</h2>
+            <div class="profile-name">ネモト ジュンノスケ</div>
+            <div class="profile-role">アナログ世代の「AI右腕」 / 業務効率化コンサルタント</div>
+            <p style="font-size: 0.95rem; text-align: left;">
+                元メーカー系技術職として、「難しいことを簡単に翻訳する」ことを得意としてきました。<br>
+                現在は中高年・シニア層にもやさしいAI講師として、横浜を拠点に活動しています。<br>
+                「お孫さんに自慢できる」くらい、楽しく簡単にAIを使いこなせるようサポートします。
+            </p>
+        </div>
+
+        <!-- Menu -->
+        <h2 class="section-title">メニュー・料金</h2>
+
+        <!-- Individual -->
+        <div class="pricing-group">
+            <h3>【 個人・フリーランスの方 】<br><span style="font-size:0.8rem; font-weight:normal;">まずは自分で使えるようになりたい方向け</span></h3>
+
+            <div class="card plum">
+                <div class="plan-header">
+                    <div class="plan-name">🌸 梅 (Spot)</div>
+                </div>
+                <div class="plan-desc">単発レッスン / 90分</div>
+                <div class="price">¥20,000 <span class="intro-price">初回体験 ¥10,000</span></div>
+                <ul class="features">
+                    <li>マンツーマン・セッション (90分)</li>
+                    <li>スマホ設定 & アカウント作成サポート</li>
+                    <li>「声で仕事が終わる」体験レッスン</li>
+                </ul>
+            </div>
+
+            <div class="card bamboo">
+                <div class="plan-header">
+                    <div class="plan-name">🎍 竹 (Basic)</div>
+                </div>
+                <div class="plan-desc">月額サポート / 月2回</div>
+                <div class="price">¥50,000 <span>/ 月</span></div>
+                <ul class="features">
+                    <li>月2回のオンライン/対面 (90分)</li>
+                    <li>チャット相談（いつでもOK）</li>
+                    <li>AI操作レクチャー & 習慣化支援</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="pricing-group">
+            <h3>【 法人・経営者様 】<br><span style="font-size:0.8rem; font-weight:normal;">社員教育・業務フロー構築向け</span></h3>
+
+            <div class="card plum">
+                <div class="plan-header">
+                    <div class="plan-name">🌸 梅 (Training)</div>
+                </div>
+                <div class="plan-desc">社内研修 / 120分</div>
+                <div class="price">¥30,000 <span>/ 回</span></div>
+                <ul class="features">
+                    <li>社員様向け AI活用基礎研修</li>
+                    <li>セキュリティ設定 & ルール作り</li>
+                    <li>業務効率化のデモンストレーション</li>
+                </ul>
+            </div>
+
+            <div class="card bamboo">
+                <span class="badge">おすすめ（顧問）</span>
+                <div class="plan-header">
+                    <div class="plan-name">🎍 竹 (Advisor)</div>
+                </div>
+                <div class="plan-desc">業務定着支援 / 月2回訪問</div>
+                <div class="price">¥100,000 <span>/ 月</span></div>
+                <ul class="features">
+                    <li>月2回の訪問コンサルティング</li>
+                    <li>実務レベルのプロンプト作成代行</li>
+                    <li>社内AI担当者の育成サポート</li>
+                </ul>
+            </div>
+
+            <div class="card pine">
+                <div class="plan-header">
+                    <div class="plan-name">🌲 松 (Partner)</div>
+                </div>
+                <div class="plan-desc">プロジェクト開発</div>
+                <div class="price">¥200,000〜 <span>/ 月</span></div>
+                <ul class="features">
+                    <li>専用AIツール・Chatbot開発</li>
+                    <li>新規事業立ち上げ・出版支援</li>
+                    <li>業務フロー全体の再設計</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>まずは「面倒なこと」を一つ、<br>教えてください。</h2>
+            <p>LINEで気軽にご相談いただけます。<br>（個人の直通LINEに繋がります）</p>
+            <a href="https://line.me/ti/p/your_line_id" class="btn-line">LINEで相談・予約する</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 Junnosuke Nemoto. All Rights Reserved.
+    </footer>
+
 </body>
 
 </html>
