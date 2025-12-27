@@ -475,11 +475,23 @@ footer {
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
+        align-items: flex-start;
+        /* Override desktop center alignment */
         text-align: left;
+    }
+
+    .hero-text {
+        width: 100%;
+        /* Ensure full width for text alignment */
     }
 
     .hero p {
         text-align: left;
+    }
+
+    /* Keep image centered if preferred, or left if consistent. Let's center the image for balance. */
+    .hero-image {
+        margin: 0 auto 30px auto;
     }
 
     .hero-image img {
