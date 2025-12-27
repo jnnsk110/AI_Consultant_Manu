@@ -90,12 +90,89 @@ nav a:hover {
     color: var(--brand-gold);
 }
 
+/* --- Hamburger Menu (Mobile) --- */
+.menu-btn {
+    display: none;
+    /* Hidden on Desktop */
+    cursor: pointer;
+    z-index: 1002;
+    padding: 10px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--brand-navy);
+    margin-bottom: 5px;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+#menu-toggle {
+    display: none;
+    /* Always hidden checkbox */
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
+    .menu-btn {
+        display: block;
     }
 
-    /* Simplified for mobile */
+    /* Change burger to X when checked */
+    #menu-toggle:checked+.menu-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-toggle:checked+.menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hidden by default */
+        width: 100%;
+        /* Full width */
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s ease;
+        padding-top: 80px;
+        z-index: 1001;
+        display: block;
+        /* Ensure it's block so we can see it when slide in */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Slide in when checked */
+    #menu-toggle:checked~nav {
+        right: 0;
+    }
+
+    /* Disable body scroll when menu open (Optional/Advanced, skipping for pure CSS simplicity) */
 }
 
 /* --- Hero Section --- */

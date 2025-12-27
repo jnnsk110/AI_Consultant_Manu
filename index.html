@@ -22,13 +22,28 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">横浜のAI活用コンサルタント</a>
+
+            <!-- Hamburger Checkbox & Label (Pure CSS Menu) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <nav>
                 <ul>
-                    <li><a href="#values">Solutions</a></li>
-                    <li><a href="#about">Concept</a></li>
-                    <li><a href="#services">Plans</a></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <!-- Added onclick to close menu on mobile when clicked -->
+                    <li><a href="#values" onclick="document.getElementById('menu-toggle').checked = false;">できること</a>
+                    </li>
+                    <li><a href="#about" onclick="document.getElementById('menu-toggle').checked = false;">コンセプト</a>
+                    </li>
+                    <li><a href="#services" onclick="document.getElementById('menu-toggle').checked = false;">料金プラン</a>
+                    </li>
+                    <li><a href="#profile" onclick="document.getElementById('menu-toggle').checked = false;">プロフィール</a>
+                    </li>
+                    <li><a href="#contact" onclick="document.getElementById('menu-toggle').checked = false;">お問い合わせ</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -118,7 +133,7 @@
     <!-- About -->
     <section id="about" class="bg-gray">
         <div class="container">
-            <h2 class="section-title">Why Me?</h2>
+            <h2 class="section-title">大切にしていること (Why Me?)</h2>
             <div class="concept-grid">
                 <div class="feature-item">
                     <h3>01. キーボード不要</h3>
@@ -139,7 +154,7 @@
     <!-- Services & Pricing -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">Plans & Pricing</h2>
+            <h2 class="section-title">料金プラン (Plans)</h2>
 
             <div style="text-align: center; margin-bottom: 30px;">
                 <span class="pricing-header">個人・フリーランス向け</span>
