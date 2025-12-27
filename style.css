@@ -478,6 +478,10 @@ footer {
         text-align: left;
     }
 
+    .hero p {
+        text-align: left;
+    }
+
     .hero-image img {
         width: 200px;
         height: 200px;
