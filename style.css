@@ -218,6 +218,16 @@ nav a:hover {
     letter-spacing: 0.1em;
 }
 
+.hero-impact {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e53e3e;
+    /* Impact red */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .hero h1 {
     font-size: 2.8rem;
     line-height: 1.3;
