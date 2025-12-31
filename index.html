@@ -34,9 +34,9 @@
             <nav>
                 <ul>
                     <!-- Added onclick to close menu on mobile when clicked -->
-                    <li><a href="#values" onclick="document.getElementById('menu-toggle').checked = false;">できること</a>
+                    <li><a href="#philosophy" onclick="document.getElementById('menu-toggle').checked = false;">提供価値</a>
                     </li>
-                    <li><a href="#about" onclick="document.getElementById('menu-toggle').checked = false;">コンセプト</a>
+                    <li><a href="#values" onclick="document.getElementById('menu-toggle').checked = false;">解決メニュー</a>
                     </li>
                     <li><a href="#services" onclick="document.getElementById('menu-toggle').checked = false;">料金プラン</a>
                     </li>
@@ -69,6 +69,69 @@
         </div>
     </section>
 
+    <!-- Philosophy (Original Values) -->
+    <section id="philosophy" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2 class="section-title">ビジネス活用における<br>生成AIの「利用価値」と「課題」</h2>
+            <div class="values-grid">
+
+                <!-- 01. 思考の具現化 -->
+                <div class="value-item" data-num="01">
+                    <div class="value-content">
+                        <h3>思考とデータの資産化<span
+                                style="font-size:0.9rem; font-weight:normal;">あなたの「頭の中」と大量のデータを、成果に変えます。</span></h3>
+                        <ul>
+                            <li>モヤモヤしたアイデア、散乱したメモ、長時間の会議録音、移動中の独り言も。それらは<strong>情報の宝庫</strong>です。</li>
+                            <li>大規模言語モデルの本質である「文脈理解」を活かして<strong>情報を構造化</strong>し、その場で<strong>「企画書」や「資料」の素案</strong>を作成。
+                            </li>
+                            <li>単なる記録係ではなく、あなたの<strong>壁打ちパートナー</strong>として思考整理と目的に合わせた出力をサポートします。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 02. ワークフロー革新 -->
+                <div class="value-item" data-num="02">
+                    <div class="value-content">
+                        <h3>ワークフロー革新<span style="font-size:0.9rem; font-weight:normal;">「面倒なくり返し業務」を、自動化の仕組みへ。</span>
+                        </h3>
+                        <ul>
+                            <li><strong>日報、メール下書き作成</strong>、手書き書類のデータ化。毎日のルーチンワークを、AIのアシストで<strong>「あなたに合わせて」</strong>効率化します。
+                            </li>
+                            <li>最新ツールとAIを組み合わせ、<strong>無理なく続く仕組み</strong>を構築。</li>
+                            <li>負担を減らし、<strong>「人間にしかできない判断や創造的な仕事」</strong>に集中できる時間を生み出します。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 03. AIポテンシャルの解放 -->
+                <div class="value-item" data-num="03">
+                    <div class="value-content">
+                        <h3>AIポテンシャルの最大化<span style="font-size:0.9rem; font-weight:normal;">意図通りの回答を引き出す技術。</span></h3>
+                        <ul>
+                            <li>AIは、漠然と使うだけでは<strong>「一般的な回答」</strong>しか返しません。</li>
+                            <li>思考プロセスを言語化し、AIに<strong>的確に指示する技術（プロンプト・エンジニアリング）</strong>を提供します。</li>
+                            <li>あなたのビジネスや目的に合わせ、AIが<strong>120%の能力を発揮できる環境</strong>を整えます。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 04. 表現と組織の拡張 -->
+                <div class="value-item" data-num="04">
+                    <div class="value-content">
+                        <h3>表現力の拡張と組織定着<span style="font-size:0.9rem; font-weight:normal;">「想い」を可視化し、組織に「AI体質」を。</span>
+                        </h3>
+                        <ul>
+                            <li>言葉だけでは伝わりにくいイメージも、<strong>画像・映像生成AI</strong>を活用して可視化します。</li>
+                            <li>さらに、社長だけでなく<strong>社員様への研修・実務導入</strong>までサポート。</li>
+                            <li>ツールを入れて終わりではなく、<strong>「現場でAIが使われる組織」</strong>になるまで伴走します。</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Service Styles & Concrete Menu -->
     <section id="values" style="background-color: #fff;">
         <div class="container">
@@ -79,32 +142,33 @@
 
             <!-- 1. Service Styles (How) -->
             <h3 class="subsection-title" style="text-align:center; color:var(--brand-navy); margin-bottom:30px;">
-                選べる4つの提供スタイル
+                選べる3つの提供スタイル
             </h3>
-            <div class="styles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 60px;">
+            <div class="styles-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 60px;">
                 <!-- Style 1 -->
-                <div class="style-card" style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <div class="style-card"
+                    style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
                     <div class="style-icon" style="font-size: 2rem; margin-bottom: 10px;">👨‍💻</div>
-                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">個別コンサル</h4>
-                    <p style="font-size: 0.9rem; color: #4a5568;">経営者・リーダー向け。壁打ち、戦略策定、右腕としての実行支援を行います。あなたの専属パートナーとして機能します。</p>
+                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">AI活用コンサルティング</h4>
+                    <p style="font-size: 0.9rem; color: #4a5568;">
+                        経営者・リーダー向け。「AIの右腕」として、戦略策定から実務への落とし込みまで伴走。あなたのビジネス課題を隣で解決します。</p>
                 </div>
                 <!-- Style 2 -->
-                <div class="style-card" style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <div class="style-card"
+                    style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
                     <div class="style-icon" style="font-size: 2rem; margin-bottom: 10px;">🤝</div>
-                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">個人レッスン</h4>
-                    <p style="font-size: 0.9rem; color: #4a5568;">初心者向け。PC/スマホの設定から、「実際に使えるようになるまで」隣で伴走します。分からないことはその場で解決。</p>
+                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">個別レッスン</h4>
+                    <p style="font-size: 0.9rem; color: #4a5568;">
+                        初心者・個人事業主向け。PC/スマホの設定から、「自分の業務で使えるようになるまで」マンツーマンで徹底サポートします。</p>
                 </div>
                 <!-- Style 3 -->
-                <div class="style-card" style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
-                    <div class="style-icon" style="font-size: 2rem; margin-bottom: 10px;">👥</div>
-                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">グループワーク</h4>
-                    <p style="font-size: 0.9rem; color: #4a5568;">チーム・部署向け。実際の業務課題を持ち寄り、その場でAIを使って解決策を作る実践形式のワークショップです。</p>
-                </div>
-                <!-- Style 4 -->
-                <div class="style-card" style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <div class="style-card"
+                    style="background: #f8fafc; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
                     <div class="style-icon" style="font-size: 2rem; margin-bottom: 10px;">🏫</div>
-                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">企業研修</h4>
-                    <p style="font-size: 0.9rem; color: #4a5568;">全社員向け。AIの基礎知識、セキュリティ教育、社内ルールの策定など、組織全体のAIリテラシー底上げを支援します。</p>
+                    <h4 style="color: var(--brand-navy); margin-bottom: 10px;">企業研修・グループワーク</h4>
+                    <p style="font-size: 0.9rem; color: #4a5568;">
+                        組織・チーム向け。全社的なリテラシー研修から、部署ごとの課題をその場で解決する実践ワークショップまで対応します。</p>
                 </div>
             </div>
 
@@ -112,80 +176,173 @@
             <h3 class="subsection-title" style="text-align:center; color:var(--brand-navy); margin-bottom:30px;">
                 具体的な解決メニュー（例）
             </h3>
-            <div class="menu-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                
+            <div class="menu-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
                 <!-- Category 1 -->
                 <div class="menu-category">
-                    <h4 style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span style="margin-right: 10px;">🔰</span> AIの基礎・導入
                     </h4>
                     <ul class="check-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> ChatGPT / Gemini の基礎中の基礎（登録〜初会話）</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 「スマホ音声入力」の設定と習慣化レクチャー</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 有料版・無料版の選び方とセキュリティ設定</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> ChatGPT / Gemini
+                            の<strong>基礎中の基礎</strong>（登録〜本質的な活用法）</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            <strong>「スマホ音声入力」</strong>の設定と習慣化レクチャー
+                        </li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            有料版・無料版の<strong>選び方とセキュリティ設定</strong></li>
                     </ul>
                 </div>
 
                 <!-- Category 2 -->
                 <div class="menu-category">
-                    <h4 style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span style="margin-right: 10px;">⚡️</span> 事務・ルーティンの自動化
                     </h4>
                     <ul class="check-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 面倒なメール返信・下書きの自動生成</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 日報・報告書の作成時間短縮 (音声 → テキスト化)</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 会議の録音 → 議事録・要約の自動作成</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            面倒な<strong>メール返信・下書き</strong>の自動生成</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            日報・報告書の<strong>作成時間短縮</strong>
+                            (音声 → テキスト化)</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 会議の録音 →
+                            <strong>議事録・要約・アクションリスト</strong>の自動作成
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Category 3 -->
                 <div class="menu-category">
-                    <h4 style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
                         <span style="margin-right: 10px;">💡</span> 企画・アイディア出し
                     </h4>
                     <ul class="check-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> ブレインストーミングの壁打ち相手</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> フレームワーク (SWOT, 3C等) を使った分析</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 大量の情報・PDF資料の要約と整理</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            <strong>ブレインストーミング</strong>の壁打ち相手
+                        </li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> フレームワーク (SWOT,
+                            3C等) を使った<strong>分析</strong></li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            大量の情報・PDF資料の<strong>要約と整理</strong></li>
                     </ul>
                 </div>
 
                 <!-- Category 4 -->
                 <div class="menu-category">
-                    <h4 style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
-                        <span style="margin-right: 10px;">🤖</span> スキルアップ・秘書化
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                        <span style="margin-right: 10px;">🤖</span> 専属専門家AI・秘書AI構築
                     </h4>
                     <ul class="check-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> スケジュール管理・タスクの優先順位付け</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 効果的なプレゼン資料・スライド構成案の作成</li>
-                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span> 「あなた専用」の業務マニュアル・GPTs作成</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            <strong>あなたに寄り添う知恵者</strong>の作成
+                        </li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            効果的な<strong>プレゼン資料・スライド</strong>構成案の作成</li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            スケジュール管理・タスクの<strong>優先順位付け</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="menu-category">
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                        <span style="margin-right: 10px;">🧠</span> 自社のエキスパートAI作成
+                    </h4>
+                    <ul class="check-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            社内マニュアルや過去の事例を<strong>完全学習させる</strong></li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            24時間365日即答してくれる<strong>「社内No.1社員」の分身構築</strong></li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            新人教育や問い合わせ対応の<strong>自動化</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="menu-category">
+                    <h4
+                        style="border-bottom: 2px solid var(--brand-gold); padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center;">
+                        <span style="margin-right: 10px;">🆘</span> その他煩雑な困りごとの解決
+                    </h4>
+                    <ul class="check-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            「こんなことできる？」「あれが面倒」という<strong>ご相談対応</strong></li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            他ツールとの連携やAPI活用などの<strong>高度な開発支援</strong></li>
+                        <li style="margin-bottom: 8px; padding-left: 1.5em; position: relative;"><span
+                                style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
+                            成果を上げる<strong>SNS運用の効率化</strong>、その他</li>
                     </ul>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="bg-gray">
-        <div class="container">
-            <h2 class="section-title">大切にしていること</h2>
-            <div class="concept-grid">
-                <div class="feature-item">
-                    <h3>01. 「話すこと」から始まる</h3>
-                    <p>PCに向かうのではなく、まずは対話から。難しい操作は不要です。あなたの熱量や想いを、まずは声で受け止めます。</p>
-                </div>
-                <div class="feature-item">
-                    <h3>02. 「正解」より「あなたらしさ」</h3>
-                    <p>AIが出す一般的な正解ではなく、あなたの会社の文化や、あなたの個性が反映された「あなただけの」アウトプットを目指します。</p>
-                </div>
-                <div class="feature-item">
-                    <h3>03. 先生ではなく「寄り添う右腕」</h3>
-                    <p>一方的に教えるだけの関係ではありません。私が隣で一緒に手を動かし、設定から運用まで、実働部隊として機能します。</p>
+            <!-- Flexibility (Where & When) -->
+            <div class="flexibility-box"
+                style="margin-top: 60px; background: #fffdf5; border: 2px dashed var(--brand-gold); border-radius: 12px; padding: 40px 30px; text-align: center;">
+                <h3 style="color: var(--brand-navy); margin-bottom: 30px; font-size: 1.3rem;">
+                    場所も時間も、あなたのビジネススタイルに合わせて
+                </h3>
+                <div class="flex-container"
+                    style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left; max-width: 800px; margin: 0 auto;">
+
+                    <!-- Location -->
+                    <div style="flex: 1; min-width: 280px;">
+                        <h4
+                            style="color: var(--brand-navy); margin-bottom: 15px; display: flex; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">
+                            <span style="font-size: 1.5rem; margin-right: 10px;">📍</span> 場所 (Where)
+                        </h4>
+                        <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-main);">
+                            <strong>「お客様の元へ伺う」対面ハンズオン</strong>を基本としています。<br>
+                            使い慣れたご自身のPC・オフィス環境で直接レクチャーを受けるのが、習得への一番の近道だからです。<br>
+                            <span
+                                style="font-size: 0.9rem; color: var(--text-light); display:block; margin-top:5px;">※遠方の方やご希望に合わせて、Zoom等でのオンライン対応も可能です。</span>
+                        </p>
+                    </div>
+
+                    <!-- Time -->
+                    <div style="flex: 1; min-width: 280px;">
+                        <h4
+                            style="color: var(--brand-navy); margin-bottom: 15px; display: flex; align-items: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">
+                            <span style="font-size: 1.5rem; margin-right: 10px;">⏰</span> 時間 (When)
+                        </h4>
+                        <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-main);">
+                            経営者様の多忙なスケジュールに合わせて<strong>柔軟に調整</strong>いたします。<br>
+                            <strong>早朝・夜間・土日祝日</strong>など、業務の合間や落ち着いた時間帯をご指定ください。<br>
+                            <span
+                                style="font-size: 0.9rem; color: var(--text-light); display:block; margin-top:5px;">※「今すぐ聞きたい」にはLINEで対応します。</span>
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Services & Pricing -->
     <section id="services">
@@ -286,19 +443,21 @@
         </div>
     </section>
 
+
+
     <!-- Profile -->
     <section id="profile" class="bg-gray">
         <div class="container">
-            <h2 class="section-title">Profile</h2>
+            <h2 class="section-title">プロフィール</h2>
             <div class="profile-container">
                 <div class="profile-left">
                     <img src="./profile_sq.jpg" alt="Nemoto Junnosuke" style="border-radius: 50%;">
                 </div>
                 <div class="profile-right">
                     <h3>根本 じゅんのすけ</h3>
-                    <span class="profile-title">AI活用コンサルタント / JOYREST 代表</span>
+                    <span class="profile-title">AI活用コンサルタント / ジョイレスト 代表</span>
                     <p>
-                        機械メーカーでの技術・営業・サポート職の経験を活かし、「難しい技術を、誰にでもわかる言葉で」伝えることをミッションに活動。<br>
+                        機械系メーカーでの金属歴約30年。（製造・研究開発・物流・運輸・航空宇宙・防衛分野）技術・営業・カスタマーサポート職の経験を活かし、「難しい技術を、誰にでもわかる言葉で」伝えることをミッションに活動。<br>
                         「ITが苦手」でも大丈夫。AIを「最高の武器」に変える伴走型支援を得意としています。
                     </p>
                     <div
@@ -320,10 +479,31 @@
         </div>
     </section>
 
+    <!-- About (Moved again) -->
+    <section id="about" class="bg-gray" style="background-color: #f7fafc;">
+        <div class="container">
+            <h2 class="section-title">大切にしていること</h2>
+            <div class="concept-grid">
+                <div class="feature-item">
+                    <h3>01. 「話すこと」から始まる</h3>
+                    <p>PCに向かうのではなく、まずは対話から。難しい操作は不要です。あなたの熱量や想いを、まずは声で受け止めます。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>02. 「正解」より「あなたらしさ」</h3>
+                    <p>AIが出す一般的な正解ではなく、あなたの会社の文化や、あなたの個性が反映された「あなただけの」アウトプットを目指します。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>03. 先生ではなく「寄り添う右腕」</h3>
+                    <p>一方的に教えるだけの関係ではありません。私が隣で一緒に手を動かし、設定から運用まで、実働部隊として機能します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">お問い合わせ</h2>
             <div class="cta-band">
                 <h3>まずは「面倒なこと」を一つ、教えてください。</h3>
                 <p>「LINE」または「下記フォーム」より、ご都合の良い方法でご連絡ください。</p>
