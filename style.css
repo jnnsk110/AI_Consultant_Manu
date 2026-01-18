@@ -655,3 +655,37 @@ footer {
         padding: 30px 20px;
     }
 }
+
+/* --- ROI Calculation Box --- */
+.roi-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f0fff4; /* Light Green */
+    border: 1px solid #c6f6d5;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.roi-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #2f855a; /* Dark Green */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.roi-text {
+    font-size: 0.85rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.roi-calc {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 5px;
+    display: block;
+    border-top: 1px dashed #cbd5e0;
+    padding-top: 5px;
+}
